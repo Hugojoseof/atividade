@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: aqua;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 10px;
+    }
+
+    ul,
+    li {
+        background-color: black;
+        display: flex;
+        width: 100%;
+        height: 50px;
+    }
+
+    li {
+        align-items: flex-end;
+        text-align: center;
+        height: 50%;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+
+    }
+</style>
+
+<body>
+
+    {% for cliente in cliente %}
+    <h1>Seja bem-vindo {{cliente.nome}}</h1>
+    {% endfor %}
+
+
+    <ul>
+        <li><a href="{% url 'index' %}">Index</a></li>
+        <li><a href=" {% url 'lista_locacao' %}">Locação</a></li>
+        <li><a href="{% url 'filme' %}">Filmes</a></li>
+    </ul>
+    <br>
+    <p>Aluno: Hugo José de Lima Nunes</p>
+
+</body>
+
+</html>
